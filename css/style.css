@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    display: grid;
+    place-content: center;
+}
+.cover{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    /* animation: spinner infinite linear alternate;
+    animation: name duration timing-function delay iteration-count; */
+    animation-name: spinner;
+    animation-duration: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+.control{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 4rem;
+
+    button{
+        background-color: transparent;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    button:nth-child(2){
+        font-size: 2.5rem;
+    }
+}
+@keyframes spinner {
+       0%{
+        transform: rotate(0deg);
+       }
+       100%{
+        transform: rotate(360deg);
+       }
+}
+.wrapper.play .cover{
+    animation-play-state:running;
+}
+
+.cover{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    /* animation: spinner infinite linear alternate;
+    animation: name duration timing-function delay iteration-count; */
+    animation-name: spinner;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+#changeVolume{
+    width: 100%;   
+}
